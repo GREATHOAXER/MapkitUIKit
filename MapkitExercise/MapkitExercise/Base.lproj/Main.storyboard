@@ -19,14 +19,24 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1O7-Zi-diM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msX-uG-krP">
+                                <rect key="frame" x="345" y="74" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="위치" buttonSize="medium"/>
+                                <connections>
+                                    <action selector="findCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rg-YD-d69"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1O7-Zi-diM" secondAttribute="bottom" id="0cV-gc-Tpv"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Xx-aN-Cer"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="msX-uG-krP" secondAttribute="trailing" constant="20" id="Dhb-i7-WMO"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IvU-Wb-2qE"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="njn-n3-DVu"/>
+                            <constraint firstItem="msX-uG-krP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ny9-mJ-bCg"/>
                         </constraints>
                     </view>
                     <connections>
