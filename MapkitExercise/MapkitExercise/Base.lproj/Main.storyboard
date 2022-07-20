@@ -19,13 +19,66 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1O7-Zi-diM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msX-uG-krP">
-                                <rect key="frame" x="345" y="74" width="49" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-nP-g85">
+                                <rect key="frame" x="334.5" y="754" width="42" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="QCM-9v-w3V"/>
+                                    <constraint firstAttribute="width" constant="42" id="o58-rg-Pwj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="위치" buttonSize="medium"/>
+                                <buttonConfiguration key="configuration" style="plain" image="scope" catalog="system" title="">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="findCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rg-YD-d69"/>
+                                    <action selector="findCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGv-u7-T9P"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-eX-jJS">
+                                <rect key="frame" x="334.5" y="697" width="42" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="f4S-06-cgk"/>
+                                    <constraint firstAttribute="height" constant="42" id="gnn-vb-z1w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="waveform.path" catalog="system" title="">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -33,14 +86,17 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1O7-Zi-diM" secondAttribute="bottom" id="0cV-gc-Tpv"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Xx-aN-Cer"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="msX-uG-krP" secondAttribute="trailing" constant="20" id="Dhb-i7-WMO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dTv-nP-g85" secondAttribute="trailing" constant="37.5" id="87f-vu-eZL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIS-eX-jJS" secondAttribute="trailing" constant="37.5" id="8ea-qr-Bl3"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IvU-Wb-2qE"/>
+                            <constraint firstItem="dTv-nP-g85" firstAttribute="top" secondItem="cIS-eX-jJS" secondAttribute="bottom" constant="15" id="KEd-uP-Ryd"/>
+                            <constraint firstAttribute="bottom" secondItem="dTv-nP-g85" secondAttribute="bottom" constant="100" id="kl9-Jx-9NP"/>
                             <constraint firstItem="1O7-Zi-diM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="njn-n3-DVu"/>
-                            <constraint firstItem="msX-uG-krP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ny9-mJ-bCg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="1O7-Zi-diM" id="qhz-fZ-EOi"/>
+                        <outlet property="waveInformationButton" destination="cIS-eX-jJS" id="H1g-iI-ZRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -49,6 +105,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="scope" catalog="system" width="128" height="122"/>
+        <image name="waveform.path" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
